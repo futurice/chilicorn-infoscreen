@@ -1,0 +1,23 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title>Internal server error</title>
+        <link rel="stylesheet" href="/static/stylesheets/stacktrace.css">
+    </head>
+
+    <body>
+        <h1>Traceback (most recent call last):</h1>
+
+        <ul class='traceback'>
+        {% for (context, text) in traceback %}
+            <li>
+                <div class='contextrow'>{{context}}</div>
+                <div class='coderow'>{{text}}</div>
+            </li>
+        {% endfor %}
+        </ul>
+
+        <div class='exception'>{{exception}}</div>
+    </body>
+</html>

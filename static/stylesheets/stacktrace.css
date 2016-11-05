@@ -1,0 +1,17 @@
+ul.traceback {
+    list-style: none;
+    padding: 0;
+}
+
+.contextrow {
+    margin: 6px 0;
+}
+
+.coderow {
+    background-color: #c0d0e0;
+    padding: 10px 40px;
+}
+
+.exception {
+    font-weight: bold;
+}
