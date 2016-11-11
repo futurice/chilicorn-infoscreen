@@ -8,7 +8,7 @@ Implemented in [Python 3](https://www.python.org/) and [Flask](http://flask.poco
 mkdir infoscreen-venv
 cd infoscreen-venv
 virtualenv env
-. venv/bin/activate
+. env/bin/activate
 pip install Flask
 
 export FLASK_APP=flask_app.py
