@@ -33,10 +33,7 @@ def my_friend_dynamic(friend_name):
                            hair_color=friend_hair_color,
                            hobbies=friend_hobbies)
 
-@app.route('/hello/<name>')
-def hello(name):
-    return render_template('hello.html', name=name)
-
+# Show a formatted error message if there is a programming error
 @app.errorhandler(500)
 def print_traceback(ex):
     return errorutils.render_traceback(ex)
