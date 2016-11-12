@@ -1,5 +1,6 @@
 from flask import Flask
 from flask import render_template
+import time
 import errorutils
 
 app = Flask(__name__)
@@ -32,6 +33,20 @@ def my_friend_dynamic(friend_name):
                            age=friend_age,
                            hair_color=friend_hair_color,
                            hobbies=friend_hobbies)
+
+@app.route('/time')
+def time_dependent():
+    time_of_day = time.strftime('%H:%M:%S')
+    weekday = time.strftime('%A')
+    minute = time.strftime('%M')
+
+    last_minute_digit = minute[-1:]
+    if last_minute_digit in ['0', '2', '4', '6', '8']:
+        even_minute = True
+    else:
+        even_minute = False
+
+    return render_template('time.html', time_of_day=time_of_day, weekday=weekday, even_minute=even_minute)
 
 # Show a formatted error message if there is a programming error
 @app.errorhandler(500)

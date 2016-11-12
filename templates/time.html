@@ -1,0 +1,26 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title>Clock</title>
+
+        <link rel="stylesheet" href="/static/stylesheets/modernist/styles.css">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <section>
+                <p> The infoscreen should shown different information
+                based on the time and weekday. Edit time.html to change
+                this page to show different content based on the time.
+
+                <p> Today is {{weekday}}. Time is {{time_of_day}}.
+
+                {% if even_minute %}
+                    <p> Minute is even!
+                {% endif %}
+
+            </section>
+        </div>
+    </body>
+</html>
