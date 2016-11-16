@@ -1,0 +1,14 @@
+.fill-screen {
+    height: 100%;
+}
+
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.view-image {
+    display: block;
+}

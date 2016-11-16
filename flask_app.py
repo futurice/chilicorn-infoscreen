@@ -48,6 +48,10 @@ def time_dependent():
 
     return render_template('time.html', time_of_day=time_of_day, weekday=weekday, even_minute=even_minute)
 
+@app.route('/view/<viewname>')
+def infoview(viewname):
+    return render_template('views/image.html')
+
 # Show a formatted error message if there is a programming error
 @app.errorhandler(500)
 def print_traceback(ex):
