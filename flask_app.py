@@ -50,7 +50,8 @@ def time_dependent():
 
 @app.route('/view/<viewname>')
 def infoview(viewname):
-    return render_template('views/image.html')
+    template = 'views/' + viewname + '.html'
+    return render_template(template)
 
 # Show a formatted error message if there is a programming error
 @app.errorhandler(500)
