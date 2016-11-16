@@ -7,7 +7,7 @@ Implemented in [Python 3](https://www.python.org/) and [Flask](http://flask.poco
 ```
 mkdir infoscreen-venv
 cd infoscreen-venv
-virtualenv env
+virtualenv -p python3 env
 . env/bin/activate
 pip install Flask
 
