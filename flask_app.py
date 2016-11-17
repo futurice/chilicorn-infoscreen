@@ -2,6 +2,7 @@ from flask import Flask
 from flask import render_template
 import time
 import errorutils
+import random
 
 app = Flask(__name__)
 
@@ -52,6 +53,18 @@ def time_dependent():
 def infoview(viewname):
     template = 'views/' + viewname + '.html'
     return render_template(template)
+
+@app.route('/randomview')
+def infoscreen():
+    templates = ['views/image.html', 'views/text.html', 'views/webpage.html']
+
+    # Exercise: Modify the next line so that is selected a random
+    # element from the templates list.
+    #
+    # Hint: Use the random.choice() function.
+    selected_template = templates[0]
+
+    return render_template(selected_template)
 
 # Show a formatted error message if there is a programming error
 @app.errorhandler(500)
