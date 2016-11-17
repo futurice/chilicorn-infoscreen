@@ -55,7 +55,7 @@ def infoview(viewname):
     return render_template(template)
 
 @app.route('/randomview')
-def infoscreen():
+def randomview():
     templates = ['views/image.html', 'views/text.html', 'views/webpage.html']
 
     # Exercise: Modify the next line so that is selected a random

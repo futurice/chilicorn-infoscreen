@@ -5,6 +5,14 @@
         <title>Infoscreen</title>
 
         <link rel="stylesheet" href="/static/stylesheets/view.css">
+
+        <script type="text/javascript" src="/static/javascript/reload.js"></script>
+        <script type="text/javascript">
+            var wait_time = {{ reload_wait_time | default(0) }};
+            if (wait_time > 0) {
+                window.onload = wait_and_reload(wait_time);
+            }
+        </script>
     </head>
 
     <body class="full-screen">
