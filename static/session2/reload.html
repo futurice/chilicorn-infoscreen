@@ -1,0 +1,44 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title>Harjoitustehtävä</title>
+
+        <link rel="stylesheet" href="/static/stylesheets/modernist/styles.css">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <header>
+                <h1>Automaattisesti vaihtuva sisältö</h1>
+            </header>
+            
+            <section>
+                <p> Edellisessä tehtävässä luotiin sivu, jonka sisältö
+                  vaihtuu joka kerta, kun sivu ladataan. Inforuudussa
+                  sisällön vaihtumisen pitää tapahtua automaattisesti
+                  tasaisin väliajoin ilman että kukaan käy lataamassa
+                  sivua uudelleen. Tässä tehtävässä toteutetaan sivu
+                  joka lataa uutta sisältöä automaattisesti.
+
+                <p> Muokkaa flask_app.py-tiedoston
+                  randomview()-funktiota (eli samaa funktiota kuin
+                  aikaisemmin). Vaihda <code>automatic_reload =
+                  False</code> -rivi muotoon <code>automatic_reload =
+                  True</code>. Avaa
+                  sitten <a href="/randomview">/randomview</a> ja
+                  odota 15 sekuntia, niin sivu latautuu uudelleen ja
+                  näyttää satunnaisen sisällön.
+
+                <p> Sivun ajastettua lataamista varten tiedostossa
+                  <a href="/static/javascript/reload.js">/static/javascript/reload.js</a>
+                  on Javascript-kielellä tehty apufunktio. <code>var
+                  wait_time = 15;</code> kertoo kuinka monta sekuntia
+                  odotetaan ennen uudelleen lataamista. Vaihda
+                  kestoksi 30 sekuntia ja kokeile muutoksen vaikutusta
+                  lataamalla <a href="/randomview">/randomview</a>
+                  uudelleen.
+            </section>
+        </div>
+    </body>
+</html>

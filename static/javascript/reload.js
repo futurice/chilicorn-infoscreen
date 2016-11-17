@@ -9,3 +9,10 @@ function wait_and_reload(waiting_time_seconds) {
         window.location.reload(true);
     }, waiting_time_milliseconds);
 }
+
+function init_reload() {
+    var wait_time = 15;
+    wait_and_reload(wait_time);
+}
+
+window.onload = init_reload;

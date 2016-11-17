@@ -49,6 +49,18 @@ def time_dependent():
 
     return render_template('time.html', time_of_day=time_of_day, weekday=weekday, even_minute=even_minute)
 
+# Show a formatted error message if there is a programming error
+@app.errorhandler(500)
+def print_traceback(ex):
+    return errorutils.render_traceback(ex)
+
+
+### Routes for session 2 ###
+
+@app.route('/session2')
+def session2():
+    return render_template('session2.html')
+
 @app.route('/view/<viewname>')
 def infoview(viewname):
     template = 'views/' + viewname + '.html'
@@ -56,17 +68,16 @@ def infoview(viewname):
 
 @app.route('/randomview')
 def randomview():
+    # Task 1: Replace these with your own content
     templates = ['views/image.html', 'views/text.html', 'views/webpage.html']
 
-    # Exercise: Modify the next line so that is selected a random
+    # Task 2: Modify the next line so that is selected a random
     # element from the templates list.
     #
     # Hint: Use the random.choice() function.
     selected_template = templates[0]
 
-    return render_template(selected_template)
-
-# Show a formatted error message if there is a programming error
-@app.errorhandler(500)
-def print_traceback(ex):
-    return errorutils.render_traceback(ex)
+    # This will be needed in a later exercise
+    automatic_reload = False
+    
+    return render_template(selected_template, automatic_reload=automatic_reload)
