@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from flask import Flask
 from flask import render_template
 import time
@@ -61,6 +63,29 @@ def print_traceback(ex):
 @app.route('/session2')
 def session2():
     return render_template('session2.html')
+
+@app.route('/months/<selector>')
+def list_exercise(selector):
+    n = int(selector)
+
+    months = ['tammikuu', 'helmikuu', 'maaliskuu', 'huhtikuu',
+              'toukokuu', 'kesäkuu', 'heinäkuu', 'elokuu',
+              'syyskuu', 'lokakuu', 'marraskuu', 'joulukuu']
+
+    # replace ? with the month name that is at position n in the list
+    selected_month = '?'
+
+    # replace ? with a list of month names before the position n
+    before = '?'
+
+    # replace ? with a list of month names after the position n
+    after = '?'
+    
+    return render_template('months.html',
+                           n=n,
+                           month=selected_month,
+                           before=before,
+                           after=after)
 
 @app.route('/view/textfromfile')
 def infoview_from_file():

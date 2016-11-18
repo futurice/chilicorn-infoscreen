@@ -1,0 +1,58 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title>Harjoitustehtävä</title>
+
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="/static/stylesheets/modernist/styles.css">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <header>
+                <h1>Listat</h1>
+            </header>
+            
+            <section>
+                <p> Python-koodissa listoja käytetään, kun käsitellään
+                  useita toisiinsa liittyviä muuttujia. Esimerkiksi
+                  lista viikonpäivistä luodaan näin:
+
+                <p> <code>viikonpaivat = ['maanantai', 'tiistai',
+                    'keskiviikko', 'torstai', 'perjantai', 'lauantai',
+                    'sunnuntai']</code>
+
+                <p> Listoista voi poimia yhden alkion.
+                  Esimerkiksi <code>viikonpaivat[2]</code> on
+                  <code>'keskiviikko'</code>. Listoissa numerointi
+                  alkaa nollasta. Eli <code>viikonpaivat[0]</code>
+                  on <code>'maanantai'</code>
+                  ja <code>viikonpaivat[1]</code>
+                  on <code>'tiistai'</code> ja niin edelleen.
+
+
+                <p> Listoista voi myös erotella alku- ja loppuosat.
+                  Esimerkiksi: <code>viikonpaivat[:3]</code> on lista,
+                  joka koostuu kolmesta ensimmäisestä
+                  viikonpäivästä: <code>['maanantai', 'tiistai',
+                  'keskiviikko']</code>.
+                  Ja <code>viikonpaivat[3:]</code> on lista ilman
+                  kolmea ensimmäistä päivää: <code>['torstai',
+                  'perjantai', 'lauantai', 'sunnuntai']</code>.
+
+                <p> Tehtäväsi on täydentää
+                  <code>list_exercise(selector)</code>-funktio
+                  flask_app.py-tiedostossa niin
+                  että <a href="/months/4">tämä sivu</a> näyttää ennen
+                  neljännen kuun nimen ja sitä ennen ja sen jälkeen
+                  tulevat kuukaudet.
+
+                <p> Kokeile myös vaihtaa numeroa osoitteen lopussa.
+                  Mitä tapahtuu, jos vaihdat numeroksi suuremman kuin
+                  12 tai jotain muuta kuin numeron?
+
+            </section>
+        </div>
+    </body>
+</html>
