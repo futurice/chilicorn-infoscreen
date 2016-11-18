@@ -3,6 +3,7 @@ from flask import render_template
 import time
 import errorutils
 import random
+import codecs
 
 app = Flask(__name__)
 
@@ -60,6 +61,19 @@ def print_traceback(ex):
 @app.route('/session2')
 def session2():
     return render_template('session2.html')
+
+@app.route('/view/textfromfile')
+def infoview_from_file():
+    # Read lines from a file into an array
+    lines = codecs.open('texts/example.txt', 'r', 'UTF-8').readlines()
+
+    first_line = ''  # put the first line from the file here
+    other_lines = '' # rest of the lines here joined together.
+                     # Hint: To join lines, use '\n'.join(...)
+    
+    return render_template('views/text_template.html',
+                           title=first_line,
+                           text=other_lines)
 
 @app.route('/view/<viewname>')
 def infoview(viewname):

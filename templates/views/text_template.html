@@ -1,0 +1,26 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title>Infoscreen</title>
+
+        <link rel="stylesheet" href="/static/stylesheets/modernist/styles.css">
+
+        {% if automatic_reload %}
+            <script type="text/javascript" src="/static/javascript/reload.js"></script>
+        {% endif %}
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <header>
+                <h1>{{ title }}</h1>
+            </header>
+            
+            <section>
+                <p> {{ text }}
+            </section>
+        </div>
+
+    </body>
+</html>
