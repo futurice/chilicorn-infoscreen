@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 
-from flask import Flask
-from flask import render_template
+from flask import Flask, render_template, abort
 import time
 import errorutils
 import random
 import codecs
+from jinja2 import TemplateNotFound
 
 app = Flask(__name__)
 
@@ -60,9 +60,12 @@ def print_traceback(ex):
 
 ### Routes for session 2 ###
 
-@app.route('/session2')
-def session2():
-    return render_template('session2.html')
+@app.route('/sessions/<n>')
+def session_pages(n):
+    try:
+        return render_template('session' + n + '.html')
+    except TemplateNotFound:
+        abort(404)
 
 @app.route('/months/<selector>')
 def list_exercise(selector):
